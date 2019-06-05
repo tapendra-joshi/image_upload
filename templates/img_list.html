@@ -1,0 +1,12 @@
+<table border="1" colspan="2" width="100%">
+   <tr>
+     <th width="60%">File</td>
+     <th width="40%">Download</td>
+   </tr>
+ {% for img in total_imgs %}
+   <tr>
+     <td width="60%"><img src="{{ img.img.url }}"></td>
+     <td width="40%" align="center" style="text-decoration:None"><a href="{% url 'download' img.name %}">Download here</a></td>
+   </tr>
+ {% endfor %}
+</table>
